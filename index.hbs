@@ -1,6 +1,22 @@
 {{!< default}}
 
 <main id="gh-main" class="gh-main gh-outer">
+    {{#match @custom.hero_enabled "Enabled"}}
+    <section class="gh-hero">
+        <div class="gh-inner">
+            <h1 class="gh-hero-title">{{@custom.hero_title}}</h1>
+            {{#if @custom.hero_subtitle}}
+                <p class="gh-hero-subtitle">{{@custom.hero_subtitle}}</p>
+            {{/if}}
+            {{#if @custom.hero_button_url}}
+                <a href="{{@custom.hero_button_url}}" class="gh-btn gh-primary-btn">
+                    {{#if @custom.hero_button_text}}{{@custom.hero_button_text}}{{else}}Learn More{{/if}}
+                </a>
+            {{/if}}
+        </div>
+    </section>
+    {{/match}}
+
     <div class="gh-inner">
         {{^is "paged"}}
             {{#foreach posts limit="1"}}

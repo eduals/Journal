@@ -56,6 +56,23 @@
                 "type": "select",
                 "options": ["Modern sans-serif", "Elegant serif"],
                 "default": "Modern sans-serif"
+            },
+            "hero_enabled": {
+                "type": "select",
+                "options": ["Disabled", "Enabled"],
+                "default": "Disabled"
+            },
+            "hero_title": {
+                "type": "text"
+            },
+            "hero_subtitle": {
+                "type": "text"
+            },
+            "hero_button_text": {
+                "type": "text"
+            },
+            "hero_button_url": {
+                "type": "text"
             }
         }
     },
